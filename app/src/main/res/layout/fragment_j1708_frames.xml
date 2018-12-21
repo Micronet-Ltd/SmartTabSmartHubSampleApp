@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_horizontal_margin"
+    android:background="@android:color/background_light"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/lblJ1708"
+        android:textStyle="normal|bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="J1708"
+        android:textColor="@android:color/holo_orange_dark"/>
+    <TextView
+        android:id="@+id/lblJ1708Packets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="TIME (MS), ID, DATA, LENGTH"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimary"/>
+    <TextView
+        android:id="@+id/lvJ1708FramesPort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:maxLines="20"
+        android:minLines="1"
+        android:textColor="@android:color/black"
+        android:textSize="13sp"
+        android:typeface="monospace"/>
+
+</LinearLayout>
