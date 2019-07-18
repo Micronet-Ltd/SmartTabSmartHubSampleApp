@@ -56,7 +56,7 @@ public class AboutFragment extends Fragment {
         rootView = inflater.inflate(R.layout.fragment_about, container, false);
         TextView txtAbout = rootView.findViewById(R.id.txtAppInfo);
         txtAbout.setText(String.format("SmartTab/SmartHub Sample App v %s\n" +
-                "Copyright © 2018 Micronet Inc.", BuildConfig.VERSION_NAME));
+                "Copyright © 2019 Micronet Inc.", BuildConfig.VERSION_NAME));
         txtAbout.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
 
         updateInfoText();

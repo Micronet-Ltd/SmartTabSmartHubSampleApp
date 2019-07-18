@@ -47,9 +47,11 @@ public class J1708FramesFragment extends Fragment {
 
                     //we want to limit the maximum number of frames being stored in lvJ1708FramesPort
                     //the side effect of this is that the frames screen could go blank a little bit
-                    if (j1708FramesViewModel.j1708FramesRxStr.getValue().length() > 5000){
-                        lvJ1708FramesPort.setText("");
-                        j1708FramesViewModel.j1708FramesRxStr.setValue("");
+                    String data = j1708FramesViewModel.j1708FramesRxStr.getValue();
+                    if (data.length() > 10000){
+                        String substring = data.substring(9000);
+                        lvJ1708FramesPort.setText(substring);
+                        j1708FramesViewModel.j1708FramesRxStr.setValue(substring);
                     }
                 }
             }

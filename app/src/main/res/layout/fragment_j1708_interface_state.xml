@@ -79,7 +79,7 @@
         android:layout_marginTop="3dp"
         android:layout_alignLeft="@+id/xAxis"
         android:layout_below="@+id/lblJ1708TransmitInterval"
-        android:text="J1939 Frames/Bytes Rx:"
+        android:text="J1708 Frames/Bytes Rx:"
         android:textColor="@android:color/black"
         android:textSize="10sp"/>
     <TextView

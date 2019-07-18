@@ -48,9 +48,11 @@ public class CanBusFramesFragment extends Fragment {
 
                     //we want to limit the maximum number of frames being stored in lvJ1939Port1Frames
                     //the side effect of this is that the frames screen could go blank a little bit
-                    if (mCanFramesViewModel.can1FramesRxStr.getValue().length() > 5000){
-                        lvJ1939Port1Frames.setText("");
-                        mCanFramesViewModel.can1FramesRxStr.setValue("");
+                    String data = mCanFramesViewModel.can1FramesRxStr.getValue();
+                    if (data.length() > 10000){
+                        String substring = data.substring(9000);
+                        lvJ1939Port1Frames.setText(substring);
+                        mCanFramesViewModel.can1FramesRxStr.setValue(substring);
                     }
                 }
             }
@@ -62,11 +64,13 @@ public class CanBusFramesFragment extends Fragment {
                 if (can2FramesRx != null && mCanFramesViewModel.can2FramesRxStr.getValue().length() != 0){
                     lvJ1939Port2Frames.setText(mCanFramesViewModel.can2FramesRxStr.getValue());
 
-                    //we want to limit the maximum number of frames being stored in lvJ1939Port1Frames
+                    //we want to limit the maximum number of frames being stored in lvJ1939Port2Frames
                     //the side effect of this is that the frames screen could go blank a little bit
-                    if (mCanFramesViewModel.can2FramesRxStr.getValue().length() > 5000){
-                        lvJ1939Port2Frames.setText("");
-                        mCanFramesViewModel.can2FramesRxStr.setValue("");
+                    String data = mCanFramesViewModel.can2FramesRxStr.getValue();
+                    if (data.length() > 10000){
+                        String substring = data.substring(9000);
+                        lvJ1939Port2Frames.setText(substring);
+                        mCanFramesViewModel.can2FramesRxStr.setValue(substring);
                     }
                 }
             }

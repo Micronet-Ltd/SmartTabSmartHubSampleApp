@@ -89,7 +89,7 @@
             android:layout_alignLeft="@+id/yAxis"
             android:layout_below="@+id/lblJ1708TransmitSpeed"
             android:background="@color/colorButtons"
-            android:text="@string/transmit_can"
+            android:text="@string/transmit_j1708"
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:textSize="10sp"/>
 
