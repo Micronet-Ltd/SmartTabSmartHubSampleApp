@@ -26,6 +26,8 @@ import com.micronet.smarttabsmarthubsampleapp.fragments.Can1OverviewFragment;
 import com.micronet.smarttabsmarthubsampleapp.fragments.Can2OverviewFragment;
 import com.micronet.smarttabsmarthubsampleapp.fragments.CanBusFramesFragment;
 import com.micronet.smarttabsmarthubsampleapp.fragments.InputOutputsFragment;
+import com.micronet.smarttabsmarthubsampleapp.fragments.J1708FramesFragment;
+import com.micronet.smarttabsmarthubsampleapp.fragments.J1708OverviewFragment;
 import com.micronet.smarttabsmarthubsampleapp.receivers.DeviceStateReceiver;
 
 import java.util.ArrayList;
@@ -113,8 +115,9 @@ public class MainActivity extends AppCompatActivity {
         adapter.addFragment(new InputOutputsFragment(), "GPIOs");
         adapter.addFragment(new Can1OverviewFragment(), "Can1");
         adapter.addFragment(new Can2OverviewFragment(), "Can2");
-        adapter.addFragment(new CanBusFramesFragment(), "CanFrames");
-        //adapter.addFragment(new J1708Fragment(), "J1708");
+        adapter.addFragment(new CanBusFramesFragment(), "Can Frames");
+        adapter.addFragment(new J1708OverviewFragment(), "J1708");
+        adapter.addFragment(new J1708FramesFragment(), "J1708 Frames");
         adapter.addFragment(new AboutFragment(), "Info");
         viewPager.setAdapter(adapter);
     }

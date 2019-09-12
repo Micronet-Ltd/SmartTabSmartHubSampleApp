@@ -67,7 +67,6 @@
         android:textColor="@android:color/black"
         android:textSize="13sp"
         android:typeface="monospace"/>
-
     <TextView
         android:id="@+id/lblCan2"
         android:textStyle="normal|bold"
