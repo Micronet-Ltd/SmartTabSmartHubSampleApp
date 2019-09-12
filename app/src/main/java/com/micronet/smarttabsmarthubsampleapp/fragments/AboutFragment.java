@@ -138,7 +138,7 @@ public class AboutFragment extends Fragment {
             table.addView(getTableRow("Device Model: ", Build.MODEL));
             table.addView(getTableRow("Serial: ", Build.SERIAL));
             table.addView(getTableRow("Hardware Library Version: ", micronet.hardware.BuildConfig.VERSION_NAME));
-            table.addView(getTableRow("CanBus Library Version: ", com.micronet.canbus.Info.VERSION));
+            table.addView(getTableRow("Vehicle Bus Library Version: ", com.micronet.canbus.Info.VERSION));
 
             linearLayout.addView(table);
 
@@ -154,7 +154,7 @@ public class AboutFragment extends Fragment {
             table.addView(getTableRow("Device Model: ", Build.MODEL));
             table.addView(getTableRow("Serial: ", Build.SERIAL));
             table.addView(getTableRow("Hardware Library Version: ", micronet.hardware.BuildConfig.VERSION_NAME));
-            table.addView(getTableRow("CanBus Library Version: ", com.micronet.canbus.Info.VERSION));
+            table.addView(getTableRow("Vehicle Bus Library Version: ", com.micronet.canbus.Info.VERSION));
 
             linearLayout.addView(table);
         }
