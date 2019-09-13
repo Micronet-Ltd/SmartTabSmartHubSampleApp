@@ -32,6 +32,9 @@ import android.widget.ToggleButton;
 import com.micronet.smarttabsmarthubsampleapp.J1708FramesViewModel;
 import com.micronet.smarttabsmarthubsampleapp.J1708Test;
 import com.micronet.smarttabsmarthubsampleapp.R;
+import com.micronet.smarttabsmarthubsampleapp.activities.MainActivity;
+import com.micronet.smarttabsmarthubsampleapp.receivers.DeviceStateReceiver;
+
 import java.util.Calendar;
 import java.util.Date;
 
@@ -80,15 +83,12 @@ public class J1708OverviewFragment extends Fragment {
         super.onResume();
         Log.d(TAG, "onResume");
 
-        IntentFilter filters = new IntentFilter();
-        filters.addAction("com.micronet.smarttabsmarthubsampleapp.dockevent");
-        filters.addAction("com.micronet.smarttabsmarthubsampleapp.portsattached");
-        filters.addAction("com.micronet.smarttabsmarthubsampleapp.portsdetached");
-
         Context context = getContext();
         if (context != null){
-            LocalBroadcastManager.getInstance(context).registerReceiver(broadcastReceiver, filters);
+            LocalBroadcastManager.getInstance(context).registerReceiver(broadcastReceiver, DeviceStateReceiver.getLocalIntentFilter());
         }
+        this.mDockState = MainActivity.getDockState();
+        updateCradleIgnState();
     }
 
     @Override
